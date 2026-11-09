@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a mirroring or interface issue
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include expected behavior. Do not include private phone content or unredacted logs.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Potok / Windows / iPhone / iOS versions
+    validations:
+      required: true
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Connection
+      options:
+        - USB network
+        - Local network / Wi-Fi
+        - Other / not connected

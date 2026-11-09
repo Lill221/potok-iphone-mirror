@@ -1,0 +1,49 @@
+<Window x:Class="PhoneMirror.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Поток — iPhone на ПК" Width="1120" Height="840" MinWidth="900" MinHeight="700" WindowStartupLocation="CenterScreen" Background="#0C1322">
+  <Window.Resources>
+    <Style x:Key="Label" TargetType="TextBlock"><Setter Property="Foreground" Value="#8294AD"/><Setter Property="FontSize" Value="11"/><Setter Property="FontWeight" Value="SemiBold"/></Style>
+  </Window.Resources>
+  <Grid>
+    <Grid.Background><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#141D31" Offset="0"/><GradientStop Color="#0B1220" Offset="0.65"/><GradientStop Color="#102928" Offset="1"/></LinearGradientBrush></Grid.Background>
+    <Grid Margin="36,26,36,24">
+      <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="24"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+      <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal"><Border Width="38" Height="38" CornerRadius="12" Background="#8AE5CE" Margin="0,0,12,0"><TextBlock Text="◒" Foreground="#102B29" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/></Border><StackPanel><TextBlock Text="поток" FontSize="25" FontWeight="SemiBold"/><TextBlock Text="IPHONE НА ТВОЁМ ПК" FontSize="9" Foreground="#8294AD"/></StackPanel></StackPanel>
+        <Border Grid.Column="1" Background="#1A3031" BorderBrush="#294947" BorderThickness="1" CornerRadius="16" Padding="14,8" VerticalAlignment="Center"><TextBlock Text="●  Локально. Без облака." Foreground="#8AE5CE" FontSize="12"/></Border>
+      </Grid>
+      <Grid Grid.Row="2"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="24"/><ColumnDefinition Width="350"/></Grid.ColumnDefinitions>
+        <Border CornerRadius="24" BorderBrush="#2A384D" BorderThickness="1" Padding="28"><Border.Background><LinearGradientBrush StartPoint="0,0" EndPoint="1,1"><GradientStop Color="#1C2B43" Offset="0"/><GradientStop Color="#131F30" Offset="1"/></LinearGradientBrush></Border.Background>
+          <ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel>
+            <TextBlock Text="ПРОСТО ПРОДОЛЖАЙ НА БОЛЬШОМ ЭКРАНЕ" Style="{StaticResource Label}"/>
+            <TextBlock Text="Твой iPhone.&#10;Без границ." FontSize="43" FontWeight="SemiBold" LineHeight="49" Margin="0,16,0,20"/>
+            <TextBlock Text="Живой экран в знакомом силуэте.&#10;Тонкая рамка, Dynamic Island и твой контент." Foreground="#AABBD0" FontSize="14" LineHeight="23"/>
+            <Border Background="#0D1828" CornerRadius="16" Padding="20" Margin="0,24,0,18"><StackPanel>
+              <TextBlock Text="СОЕДИНЕНИЕ" Style="{StaticResource Label}"/><TextBlock x:Name="StatusText" Text="Готов к подключению" FontSize="23" FontWeight="SemiBold" Margin="0,8,0,10"/>
+              <TextBlock x:Name="NetworkText" Text="Проверяю доступные подключения…" Foreground="#8AE5CE" FontSize="12"/>
+              <TextBlock x:Name="RouteText" Text="USB или Wi-Fi · выбери Potok на iPhone" Foreground="#94A3BA" FontSize="12" Margin="0,9,0,0"/>
+              <TextBlock x:Name="ProfileText" Foreground="#94A3BA" FontSize="12" Margin="0,6,0,0"/><TextBlock x:Name="MetricsText" Foreground="#8AE5CE" FontSize="12" Margin="0,6,0,0"/>
+              <TextBlock x:Name="ErrorText" Foreground="#FFB2A6" FontSize="12" Margin="0,8,0,0"/>
+            </StackPanel></Border>
+            <Button x:Name="StartButton" Content="Начать трансляцию  ↗" Background="#288A78" Click="Start_Click" Padding="20,15"/>
+            <Grid Margin="0,10,0,0"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="10"/><ColumnDefinition/></Grid.ColumnDefinitions><Button Content="Окно iPhone" Click="Phone_Click"/><Button x:Name="StopButton" Grid.Column="2" Content="Остановить" Click="Stop_Click" IsEnabled="False"/></Grid>
+            <TextBlock Text="Перемещай окно за Dynamic Island или рамку.&#10;ПКМ по рамке — оформление и режим поверх окон." Foreground="#8294AD" FontSize="11" LineHeight="19" Margin="0,17,0,0"/>
+          </StackPanel></ScrollViewer>
+        </Border>
+        <Border Grid.Column="2" CornerRadius="24" Background="#131E30" BorderBrush="#26354B" BorderThickness="1" Padding="25"><ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel>
+          <TextBlock Text="Как тебе удобно" FontSize="23" FontWeight="SemiBold" Margin="0,0,0,7"/>
+          <TextBlock Text="Чёткость, плавность и звук." Foreground="#8294AD" FontSize="13" Margin="0,0,0,24"/>
+          <TextBlock Text="КАЧЕСТВО" Style="{StaticResource Label}"/>
+          <ComboBox x:Name="ProfileBox" SelectedIndex="0"><ComboBoxItem Content="1080p · 60 кадров/с"/><ComboBoxItem Content="720p · 60 кадров/с"/><ComboBoxItem Content="1080p · 30 кадров/с"/><ComboBoxItem Content="Чётче · HEVC 1440p60 (тест)"/><ComboBoxItem Content="Текст · HEVC 2340p30 (тест)"/></ComboBox>
+          <TextBlock Text="ДЕКОДИРОВАНИЕ" Style="{StaticResource Label}"/>
+          <ComboBox x:Name="DecoderBox" SelectedIndex="1"><ComboBoxItem Content="GPU · D3D11 (экспериментально)"/><ComboBoxItem Content="CPU · совместимость"/></ComboBox>
+          <CheckBox x:Name="AudioBox" Content="Звук iPhone на ПК" IsChecked="True"/><CheckBox x:Name="SyncBox" Content="Синхронизация звука и видео" IsChecked="True"/>
+          <Border Height="1" Background="#27364B" Margin="0,24,0,20"/>
+          <TextBlock Text="ОДНО ДВИЖЕНИЕ ДО ПОДКЛЮЧЕНИЯ" Style="{StaticResource Label}"/>
+          <TextBlock Text="USB — подключи кабель и включи режим модема.&#10;&#10;Wi-Fi — подключи телефон к тому же роутеру, что и ПК.&#10;&#10;На iPhone открой «Повтор экрана» и выбери Potok." Foreground="#AABBD0" FontSize="12" LineHeight="19" Margin="0,12,0,18"/>
+          <Button Content="Управление мышью" Click="Mouse_Click"/><Button Content="Диагностика" Click="Logs_Click" Margin="0,9,0,0"/>
+          <TextBlock Text="HEVC-профили экспериментальные. Частота кадров — отчёт iPhone; она может отличаться от частоты отрисовки." Foreground="#8294AD" FontSize="11" Margin="0,16,0,0"/>
+        </StackPanel></ScrollViewer></Border>
+      </Grid>
+      <Grid Grid.Row="3" Margin="3,17,3,0"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock Text="Твоё устройство. Твоё пространство." Foreground="#667B95" FontSize="11"/><TextBlock Grid.Column="1" Text="Поток 0.3.2  ·  UxPlay / GStreamer" Foreground="#667B95" FontSize="11"/></Grid>
+    </Grid>
+  </Grid>
+</Window>

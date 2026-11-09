@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="820" viewBox="0 0 1440 820">
+ <defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#142139"/><stop offset="1" stop-color="#080e1a"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#235c58" stop-opacity=".6"/><stop offset="1" stop-color="#235c58" stop-opacity="0"/></radialGradient>
+  <linearGradient id="metal" x2="1" y2="1"><stop stop-color="#8794ac"/><stop offset=".25" stop-color="#1d2637"/><stop offset="1" stop-color="#59677e"/></linearGradient>
+  <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#112a45"/><stop offset=".55" stop-color="#304277"/><stop offset="1" stop-color="#168270"/></linearGradient>
+  <linearGradient id="accent" x2="1" y2="1"><stop stop-color="#a9f4df"/><stop offset="1" stop-color="#63c8bb"/></linearGradient>
+  <clipPath id="screen"><rect x="966" y="87" width="288" height="646" rx="39"/></clipPath>
+ </defs>
+ <rect width="1440" height="820" rx="24" fill="url(#bg)"/>
+ <circle cx="1120" cy="400" r="470" fill="url(#glow)"/>
+ <g font-family="Segoe UI,Arial,sans-serif">
+  <rect x="78" y="73" width="48" height="48" rx="15" fill="#8ae5ce"/><path d="M91 99c0-16 23-16 23 0v9H91Z" fill="#123531"/>
+  <text x="141" y="108" fill="#edf6ff" font-size="31" font-weight="600">potok</text>
+  <text x="80" y="200" fill="#88a0bd" font-size="15" letter-spacing="4">IPHONE MIRRORING FOR WINDOWS</text>
+  <text x="76" y="297" fill="#f0f5ff" font-size="78" font-weight="650">Your iPhone.</text>
+  <text x="76" y="387" fill="url(#accent)" font-size="78" font-weight="650">On Windows.</text>
+  <text x="80" y="455" fill="#a6b7ce" font-size="23">A native desktop experience.</text>
+  <text x="80" y="490" fill="#a6b7ce" font-size="23">USB networking. Wi-Fi. Your familiar screen.</text>
+  <g font-size="17" fill="#dce9f8">
+   <rect x="80" y="545" width="172" height="46" rx="23" fill="#1e3542" stroke="#365765"/><text x="106" y="574">USB + Wi-Fi</text>
+   <rect x="265" y="545" width="135" height="46" rx="23" fill="#1e3542" stroke="#365765"/><text x="294" y="574">Audio</text>
+   <rect x="413" y="545" width="205" height="46" rx="23" fill="#1e3542" stroke="#365765"/><text x="441" y="574">Adaptive frame</text>
+  </g>
+  <path d="M80 655h620" stroke="#2a3c53"/>
+  <text x="80" y="696" fill="#8196af" font-size="15">C# / WPF · Native video hosting · Open source</text>
+  <text x="80" y="735" fill="#637d98" font-size="13">Engineering preview · AirPlay receiver powered by UxPlay / GStreamer</text>
+  <rect x="952" y="73" width="316" height="674" rx="53" fill="#0b0e14" stroke="url(#metal)" stroke-width="2"/>
+  <g clip-path="url(#screen)">
+   <rect x="966" y="87" width="288" height="646" fill="url(#wall)"/>
+   <circle cx="1244" cy="437" r="193" fill="#61dcc1" opacity=".13"/><circle cx="1002" cy="312" r="150" fill="#9fa5ff" opacity=".13"/>
+   <text x="989" y="124" font-size="13" fill="#e9f9ff" font-weight="600">09:41</text><rect x="1206" y="111" width="22" height="10" rx="3" fill="#dcfff6"/>
+   <rect x="1059" y="100" width="102" height="28" rx="14" fill="#05070c"/>
+   <text x="1110" y="205" text-anchor="middle" fill="#d9eafc" font-size="16">Welcome to your space</text>
+   <text x="1110" y="270" text-anchor="middle" fill="white" font-size="58" font-weight="300">09:41</text>
+   <rect x="989" y="322" width="242" height="128" rx="23" fill="#0b1c31" fill-opacity=".65" stroke="#8dddc7" stroke-opacity=".22"/>
+   <circle cx="1023" cy="355" r="9" fill="#8ae5ce"/><text x="1041" y="361" fill="#e6fff7" font-size="15" font-weight="600">Potok</text>
+   <text x="1008" y="401" fill="#d8eafa" font-size="17">Your screen, connected.</text><text x="1008" y="426" fill="#89a5bb" font-size="13">Local mirroring on your PC</text>
+   <g fill="#abc4e5" fill-opacity=".22"><rect x="990" y="481" width="50" height="50" rx="14"/><rect x="1053" y="481" width="50" height="50" rx="14"/><rect x="1116" y="481" width="50" height="50" rx="14"/><rect x="1179" y="481" width="50" height="50" rx="14"/></g>
+   <rect x="993" y="637" width="235" height="67" rx="25" fill="#b1d9de" fill-opacity=".15"/>
+   <rect x="1066" y="718" width="88" height="4" rx="2" fill="white" fill-opacity=".75"/>
+  </g>
+  <text x="1110" y="784" text-anchor="middle" fill="#637d98" font-size="12">Illustration · synthetic demo content</text>
+ </g>
+</svg>

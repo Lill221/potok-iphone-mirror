@@ -1,0 +1,13 @@
+/tools/
+/logs/
+/app/
+**/bin/
+**/obj/
+/dist/
+/.vs/
+/PROJECT_PLAN.md
+/STATUS.md
+/TECHNICAL_DECISIONS.md
+*.user
+*.suo
+/scripts/install-apple-network.ps1
